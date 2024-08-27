@@ -14,17 +14,32 @@ BiRefNet TensorRT
 The cpp inference of BiRefNet based on Tensorrt. 
 
 <p align="center">
-  Source:
+  <span style="font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px #000000;">
+    Source
+  </span>
+</p>
+<p align="center">
   <img src="assets/Helicopter.jpg" height="225px" width="720px" />
 </p>
+
 <p align="center">
-  DichotomousImage-Gray:
+  <span style="font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px #000000;">
+    DichotomousImage-Gray
+  </span>
+</p>
+<p align="center">
   <img src="assets/Helicopter_gray.jpg" height="225px" width="720px" />
 </p>
+
 <p align="center">
-  DichotomousImage-Pseudo:
+  <span style="font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px #000000;">
+    DichotomousImage-Pseudo
+  </span>
+</p>
+<p align="center">
   <img src="assets/Helicopter_pseudo.jpg" height="225px" width="720px" />
 </p>
+
 
 ## 📑 Records
 * **2024-08-27:** Add BiRefNet TensorRT Version. 
