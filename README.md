@@ -2,6 +2,7 @@
 
 BiRefNet TensorRT
 ===========================
+[中文](https://github.com/lbq779660843/BiRefNet-Tensorrt/README_CN.md)
 
 [![python](https://img.shields.io/badge/python-3.10.12-green)](https://www.python.org/downloads/release/python-31012/)
 [![cuda](https://img.shields.io/badge/cuda-12.4-green)](https://developer.nvidia.com/cuda-downloads)
