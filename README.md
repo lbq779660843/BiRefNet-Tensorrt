@@ -11,7 +11,7 @@ BiRefNet TensorRT
 
 </div>
 
-The cpp inference of BiRefNet based on Tensorrt. 
+The cpp inference of [BiRefNet](https://github.com/ZhengPeng7/BiRefNet) based on Tensorrt. 
 
 <p align="center">
   <span style="font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px #000000;">

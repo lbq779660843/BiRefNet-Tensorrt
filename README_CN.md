@@ -10,7 +10,7 @@ BiRefNet TensorRT
 
 </div>
 
-BiRefNet网络推理模型tensorrt(cpp)的实现.
+[BiRefNet](https://github.com/ZhengPeng7/BiRefNet)网络推理模型tensorrt(cpp)的实现.
 
 <p align="center">
   原图
