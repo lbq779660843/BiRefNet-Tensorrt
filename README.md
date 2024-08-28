@@ -154,11 +154,11 @@ BiRefNet.exe <engine> <input image or video>
 Example:
 ``` shell
 # infer image
-BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine.engine test.jpg
+BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine test.jpg
 # infer folder(images)
-BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine.engine data
+BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine data
 # infer video
-BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine.engine test.mp4 
+BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine test.mp4 
 ```
 
 ## 👏 Acknowledgement
