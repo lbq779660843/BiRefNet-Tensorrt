@@ -106,7 +106,7 @@ The inference time includes the pre-preprocessing and post-processing stages:
 ## 🤖 Model Preparation
 Perform the following steps to create an onnx model:
 
-1. Download the pretrained [model](https://github.com/ZhengPeng7/BiRefNet/releases/download/v1/BiRefNet-general-bb_swin_v1_tiny-epoch_232.pth) and install[BiRefNet](https://github.com/ZhengPeng7/BiRefNet):
+1. Download the pretrained [model](https://github.com/ZhengPeng7/BiRefNet/releases/download/v1/BiRefNet-general-bb_swin_v1_tiny-epoch_232.pth) and install [BiRefNet](https://github.com/ZhengPeng7/BiRefNet):
    ``` shell
    git clone https://github.com/ZhengPeng7/BiRefNet.git
    cd BiRefNet
@@ -164,5 +164,5 @@ BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine test.mp4
 ## 👏 Acknowledgement
 
 This project is based on the following projects:
-- [Depth-Anything](https://github.com/LiheYoung/Depth-Anything) - Unleashing the Power of Large-Scale Unlabeled Data.
-- [TensorRT](https://github.com/NVIDIA/TensorRT/tree/release/8.6/samples) - TensorRT samples and api documentation.
+- [depth-anything-tensorrt](https://github.com/spacewalk01/depth-anything-tensorrt) - Reference rep.
+- [TensorRT](https://github.com/NVIDIA/TensorRT/tree/release/10.3/samples) - TensorRT samples and api documentation.
