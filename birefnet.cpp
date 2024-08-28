@@ -87,7 +87,7 @@ std::vector<float> BiRefNet::preprocess(cv::Mat& image)
     return input_tensor;
 }
 
-cv::Mat BiRefNet::predict(cv::Mat& image)
+std::pair<cv::Mat, cv::Mat> BiRefNet::predict(cv::Mat& image)
 {
     cv::Mat clone_image;
     image.copyTo(clone_image);
@@ -112,14 +112,14 @@ cv::Mat BiRefNet::predict(cv::Mat& image)
     cudaMemcpyAsync(depth_data, buffer[1], input_h * input_w * sizeof(float), cudaMemcpyDeviceToHost);
 
     // Convert the entire depth_data vector to a CV_32FC1 Mat
-    cv::Mat depth_mat(input_h, input_w, CV_32FC1, depth_data);
-    cv::normalize(depth_mat, depth_mat, 0, 255, cv::NORM_MINMAX, CV_8U);
+    cv::Mat dic_mat(input_h, input_w, CV_32FC1, depth_data);
+    cv::normalize(dic_mat, dic_mat, 0, 255, cv::NORM_MINMAX, CV_8U);
 
     // Create a colormap from the depth data
     cv::Mat colormap;
-    cv::applyColorMap(depth_mat, colormap, cv::COLORMAP_INFERNO);
+    cv::applyColorMap(dic_mat, colormap, cv::COLORMAP_INFERNO);
 
-    //// Rescale the colormap
+    // Rescale the colormap
     int limX, limY;
     if (img_w > img_h)
     {
@@ -132,10 +132,13 @@ cv::Mat BiRefNet::predict(cv::Mat& image)
         limY = input_w;
     }
     cv::resize(colormap, colormap, cv::Size(img_w, img_h));
-    //cv::resize(depth_mat, depth_mat, cv::Size(img_w, img_h));
-    //imshow("depth_result", depth_mat);
-    //cv::waitKey(0);
-    return colormap;
+    cv::resize(dic_mat, dic_mat, cv::Size(img_w, img_h));
+    // You can choose only one mat as output to accelerate inference
+    cv::cvtColor(dic_mat, dic_mat, cv::COLOR_GRAY2BGR);
+    std::pair<cv::Mat, cv::Mat> result;
+    result.first = colormap;
+    result.second = dic_mat;
+    return result;
 }
 
 bool BiRefNet::saveEngine(const std::string& onnxpath)

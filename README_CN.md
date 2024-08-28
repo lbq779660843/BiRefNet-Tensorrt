@@ -31,10 +31,10 @@ BiRefNet TensorRT
 ## ⏱️ 推理性能
 
 包含前、后处理阶段的推理时间:
-| Device          | Model | Model Input (WxH) |  Image Resolution (WxH)|Inference Time(ms)|
+| Device(System)          | Model | Model Input (WxH) |  Image Resolution (WxH)|Inference Time(ms)|
 |:---------------:|:------------:|:------------:|:------------:|:------------:|
-| RTX3080        | BiRefNet-general-bb_swin_v1_tiny-epoch_232.pth  |1024x1024  |  1024x1024    | 130     |
-
+| RTX3080(Windows11)        | BiRefNet-general-bb_swin_v1_tiny-epoch_232.pth  |1920x1080  |  (1920x2)x1080    | 130     |
+| RTXA5500(Ubuntu)        | BiRefNet-general-bb_swin_v1_tiny-epoch_232.pth  |3577x2163  | (3577x2)x2163    | 120     |
 
 ## 🛠️ C++相关库安装
 
@@ -138,11 +138,11 @@ BiRefNet.exe <engine> <input image or video>
 推理例子:
 ``` shell
 # 单图
-BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine.engine test.jpg
+BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine test.jpg
 # 文件夹
-BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine.engine data
+BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine data
 # 视频
-BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine.engine test.mp4 
+BiRefNet.exe BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine test.mp4 
 ```
 
 ## 👏 Acknowledgement

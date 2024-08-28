@@ -47,10 +47,10 @@ The cpp inference of [BiRefNet](https://github.com/ZhengPeng7/BiRefNet) based on
 ## ⏱Performance
 
 The inference time includes the pre-preprocessing and post-processing stages:
-| Device          | Model | Model Input (WxH) |  Image Resolution (WxH)|Inference Time(ms)|
+| Device(System)          | Model | Model Input (WxH) |  Image Resolution (WxH)|Inference Time(ms)|
 |:---------------:|:------------:|:------------:|:------------:|:------------:|
-| RTX3080        | BiRefNet-general-bb_swin_v1_tiny-epoch_232.pth  |1024x1024  |  1024x1024    | 130     |
-
+| RTX-3080(Windows11)      | BiRefNet-general-bb_swin_v1_tiny-epoch_232.pth  |  1920x1080  |  (1920x2)x1080    | 130     |
+| RTX-A5500(Ubuntu)        | BiRefNet-general-bb_swin_v1_tiny-epoch_232.pth  |   3577x2163 |  (3577x2)x2163    | 120     |
 
 ## 🛠️ Libraries
 

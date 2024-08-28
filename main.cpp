@@ -131,7 +131,7 @@ int main(int argc, char** argv)
         int height = cap.get(cv::CAP_PROP_FRAME_HEIGHT);
 
         // Create a VideoWriter object to save the processed video
-        cv::VideoWriter output_video("output_video.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 30, cv::Size(width, height));
+        cv::VideoWriter output_video("output_video.avi", cv::VideoWriter::fourcc('X', 'V', 'I', 'D'), 30, cv::Size(width*2, height));
         while (1)
         {
             cv::Mat frame;
@@ -144,15 +144,12 @@ int main(int argc, char** argv)
             cv::Mat new_frame;
             frame.copyTo(new_frame);
             auto start = std::chrono::system_clock::now();
-            cv::Mat result_d = birefnet_model.predict(frame);
+            std::pair<cv::Mat, cv::Mat> result_pair = birefnet_model.predict(frame);
             auto end = chrono::system_clock::now();
             cout << "Time of per frame: " << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
             cv::Mat result;
-            cv::hconcat(show_frame, result_d, result);
-            cv::resize(result, result, cv::Size(1080, 480));
-            imshow("birefnet_result", result);
-            output_video.write(result_d);
-            cv::waitKey(0);
+            cv::hconcat(result_pair.first, result_pair.second, result);
+            output_video.write(result);
         }
 
         // Release resources
@@ -177,15 +174,11 @@ int main(int argc, char** argv)
             frame.copyTo(show_frame);
 
             auto start = chrono::system_clock::now();
-            cv::Mat result_d = birefnet_model.predict(frame);
+            std::pair<cv::Mat, cv::Mat> result_pair = birefnet_model.predict(frame);
             auto end = chrono::system_clock::now();
             cout << "Time of per frame: " << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
-            //cv::Mat result;
-            //cv::hconcat(show_frame, result_d, result);
-            //cv::resize(result, result, cv::Size(1080, 480));
-            //imshow("birefnet_result", result);
-            //cv::waitKey(1);
-
+            cv::Mat result;
+            cv::hconcat(result_pair.first, result_pair.second, result);
             std::istringstream iss(imagePath);
             std::string token;
             while (std::getline(iss, token, '/'))
@@ -194,7 +187,7 @@ int main(int argc, char** argv)
             token = token.substr(token.find_last_of("/\\") + 1);
 
             std::cout << "Path : " << imageFolderPath_out + token << std::endl;
-            cv::imwrite(imageFolderPath_out + token, result_d);
+            cv::imwrite(imageFolderPath_out + token, result);
         }
     }
 

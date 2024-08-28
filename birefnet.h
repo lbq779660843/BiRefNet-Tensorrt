@@ -13,7 +13,7 @@ class BiRefNet
 {
 public:
 	BiRefNet(std::string model_path, nvinfer1::ILogger& logger);
-	cv::Mat predict(cv::Mat& image);
+	std::pair<cv::Mat, cv::Mat> predict(cv::Mat& image);
 	~BiRefNet();
 	
 private:
