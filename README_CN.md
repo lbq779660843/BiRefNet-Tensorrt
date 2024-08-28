@@ -6,7 +6,7 @@ BiRefNet TensorRT
 [![python](https://img.shields.io/badge/python-3.10.12-green)](https://www.python.org/downloads/release/python-31012/)
 [![cuda](https://img.shields.io/badge/cuda-12.4-green)](https://developer.nvidia.com/cuda-downloads)
 [![trt](https://img.shields.io/badge/TRT-10.3-green)](https://developer.nvidia.com/tensorrt)
-[![mit](https://img.shields.io/badge/license-MIT-blue)](https://github.com/ZhengPeng7/BiRefNet/blob/65a831a76e0d94a285eba3c000837c2084ec154e/LICENSE#L2)
+[![mit](https://img.shields.io/badge/license-MIT-blue)](https://github.com/lbq779660843/BiRefNet-Tensorrt/blob/main/LICENSE)
 
 </div>
 
