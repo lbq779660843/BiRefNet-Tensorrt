@@ -13,17 +13,34 @@ BiRefNet TensorRT
 [BiRefNet](https://github.com/ZhengPeng7/BiRefNet)网络推理模型tensorrt(cpp)的实现.
 
 <p align="center">
-  原图
+  <span style="font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px #000000;">
+    原图
+  </span>
+</p>
+<p align="center">
   <img src="assets/Helicopter.jpg" height="225px" width="720px" />
 </p>
+
 <p align="center">
-  二分灰度图
+  <span style="font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px #000000;">
+    二分灰度图
+  </span>
+</p>
+<p align="center">
   <img src="assets/Helicopter_gray.jpg" height="225px" width="720px" />
 </p>
+
 <p align="center">
-  二分伪彩色图
+  <span style="font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px #000000;">
+    二分伪彩色图
+  </span>
+</p>
+<p align="center">
   <img src="assets/Helicopter_pseudo.jpg" height="225px" width="720px" />
 </p>
+
+
+
 
 ## 记录
 * **2024-08-27:** 添加BiRefNet TensorRT版本.

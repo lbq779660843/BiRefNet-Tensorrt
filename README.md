@@ -138,7 +138,7 @@ Perform the following steps to create an onnx model:
 ## 🚀 Quick Start
 #### C++
 
-- **Usage 1**: Create an engine from an onnx model and save it:
+- **Step 1**: Create an engine from an onnx model and save it:
 ``` shell
 trtexec --onnx=BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx --saveEngine=BiRefNet-general-bb_swin_v1_tiny-epoch_232.engine
 ```
@@ -146,7 +146,7 @@ trtexec --onnx=BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx --saveEngine=BiRe
 > [!NOTE]
 > If you want to accelerate the inference, you could add **fp16** while quantifying the model.
 
-- **Usage 2**: Deserialize an engine. Once you've built your engine, the next time you run it, simply use your engine file:
+- **Step 2**: Deserialize an engine. Once you've built your engine, the next time you run it, simply use your engine file:
 ``` shell
 BiRefNet.exe <engine> <input image or video>
 ```
