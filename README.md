@@ -126,7 +126,7 @@ Perform the following steps to create an onnx model:
    cp cpp/py deform_conv2d_onnx_exporter.py .
    ```
 
-2. Export the model to onnx format using  [pth2onnx.py](https://github.com/spacewalk01/BiRefNet/blob/main/export.py).
+2. Export the model to onnx format using  [pth2onnx.py](https://github.com/lbq779660843/BiRefNet-Tensorrt/tree/main/py/pth2onnx.py).
     
     ``` shell
    python pth2onnx.py
